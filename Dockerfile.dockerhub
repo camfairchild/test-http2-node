@@ -1,0 +1,9 @@
+FROM node:erbium-alpine3.15
+COPY . /usr/src/app
+WORKDIR /usr/src/app
+
+RUN apk add --no-cache nodejs openssl bash 
+RUN yarn install
+CMD ["/bin/bash", "-c", "sleep infinity"]
+
+EXPOSE 5000
