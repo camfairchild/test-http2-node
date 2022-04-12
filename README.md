@@ -20,10 +20,14 @@ Docker run on your chosen port
 #### Requirements
 yarn  
 nodejs  
+Valid SSL cert and key 
 #### Steps
 Download the repo or git clone  
 Enter the directory  
 `cd test-http2-node`  
+Create an SSL cert and key  
+`openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt`  
+<i>Note: these need to be named server.crt and server.key</i>  
 Run yarn install  
 `yarn install`  
 Run yarn start  
