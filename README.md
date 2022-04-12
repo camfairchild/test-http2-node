@@ -12,7 +12,7 @@ docker
 
 #### Steps
 Docker pull
-`docker pull wich23/test-http2-node:latest`
+`docker pull wich23/test-http2-node:latest`  
 Docker run on your chosen port
 `docker run -p <host_port>:5000`
 
@@ -24,7 +24,7 @@ nodejs
 Download the repo or git clone  
 Enter the directory  
 `cd test-http2-node`  
-Run yarn install
+Run yarn install  
 `yarn install`  
 Run yarn start  
 `yarn start`  
