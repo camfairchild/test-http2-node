@@ -9,18 +9,24 @@ Or, you can run installation using this repo and node/yarn.
 ### Docker Install
 #### Requirements
 docker
-
+openssl 
 #### Steps
-Docker pull
-`docker pull wich23/test-http2-node:latest`  
+Download the repo or git clone  
+Enter the directory  
+`cd test-http2-node`  
+Create an SSL cert and key  
+`openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt`  
+<i>Note: these need to be named server.crt and server.key</i>  
+Build Docker image  
+`docker build -t test-http2 .`  
 Docker run on your chosen port
-`docker run -p <host_port>:5000`
+`docker run -p <host_port>:5000 test-http2`
 
-### Manual Install
+### Yarn Install
 #### Requirements
 yarn  
 nodejs  
-Valid SSL cert and key 
+openssl 
 #### Steps
 Download the repo or git clone  
 Enter the directory  
