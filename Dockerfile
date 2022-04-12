@@ -3,7 +3,6 @@ COPY . /usr/src/app
 WORKDIR /usr/src/app
 
 RUN apk add --no-cache nodejs
-RUN npm install -g yarn
 RUN yarn install
 CMD ["node", "index.js"]
 
