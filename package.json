@@ -1,0 +1,19 @@
+{
+    "name": "test-http2",
+    "version": "1.0.0",
+    "description": "Hosts a simple http2 REST endpoint for testing http2 connection",
+    "main": "index.js",
+    "repository": "https://github.com/camfairchild/test-http2-node",
+    "author": "camfairchild",
+    "license": "MIT",
+    "scripts": {
+        "devStart": "nodemon index.js"
+    },
+    "dependencies": {
+        "express": "^4.17.3",
+        "spdy": "^4.0.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
