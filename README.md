@@ -1,16 +1,31 @@
 # test-http2-node
 This is a tool to test http2 availability of your networking infrastructure to an exposed docker container.  
 
-## Installation
+# Installation
 Either use the docker image: https://hub.docker.com/u/wich23/test-http2-node/  
 
-Or, you can run installation using this repo and node/yarn.  
+Or, you can run installation using this repo and node/yarn or docker.  
 
-### Docker Install
-#### Requirements
+# Docker Image Install
+Docker pull the image from docker hub  
+`docker pull wich23/test-http2-node:latest` 
+Docker run on your chosen port 
+`docker run -p <host_port>:5000 wich23/test-http2-node:latest`  
+Docker exec bash to enter container (or ssh)  
+`docker exec -it <container_name> /bin/bash`  
+Run openssl to generate certs  
+`openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt`  
+<i>Note: these need to be named server.crt and server.key</i>  
+Run the server with yarn  
+`yarn start`  
+
+# Manual Install
+
+## Docker Install
+### Requirements
 docker
 openssl 
-#### Steps
+### Steps
 Download the repo or git clone  
 Enter the directory  
 `cd test-http2-node`  
@@ -22,12 +37,12 @@ Build Docker image
 Docker run on your chosen port
 `docker run -p <host_port>:5000 test-http2`
 
-### Yarn Install
-#### Requirements
+## Yarn Install
+### Requirements
 yarn  
 nodejs  
 openssl 
-#### Steps
+### Steps
 Download the repo or git clone  
 Enter the directory  
 `cd test-http2-node`  
